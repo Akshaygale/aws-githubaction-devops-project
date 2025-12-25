@@ -1,7 +1,8 @@
 resource "aws_key_pair" "devops_key" {
-  key_name   = "devops-key"
-  public_key = file("~/.ssh/id_rsa.pub")
+  key_name   = "devops_key"
+  public_key = file("devops_key.pub")
 }
+
 
 resource "aws_security_group" "devops_sg" {
   name        = "devops-sg"
